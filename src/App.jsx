@@ -1,35 +1,37 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import workintech from '/workintech.svg'
-import './App.css'
+import { Switch, Route, useLocation } from 'react-router-dom';
+import Header from './components/Header';
+import PizzaBoyutu from "./components/PizzaBoyutu"
+import Hamur from './components/Hamur';
+import SiparisNotu from './components/SiparisNotu';
+import './components/cmponents.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import EkMalzemeler from './components/EkMalzemeler';
 
 function App() {
-  const [count, setCount] = useState(0)
 
-  return (
+return (
     <>
+      <Header />
       <div>
-        <a href="https://github.com/Workintech/fsweb-s7-challenge-pizza" target="_blank">
-          <img src={workintech} className="logo" alt="Workintech logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Workintech + 🍕</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          Absolute Acı Pizza sayısı {count}
-        </button>
+        <h4>
+          Position Absolute Acı Pizza
+        </h4>
+        <h3>
+          85.50 TL
+        </h3>
         <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
+          Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin
+          Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin
+          Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin
+          Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin
         </p>
+        <PizzaBoyutu name="content-section"/>
+        <Hamur name="content-section"/>
+        <EkMalzemeler name="content-section"/>
+        <SiparisNotu name="content-section"/>
       </div>
-      <p className="read-the-docs">
-        Click on the Workintech or Pizza logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
 export default App

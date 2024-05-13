@@ -1,0 +1,12 @@
+header {
+  padding: 1rem;
+  background: #CE2829;
+  text-align: center;
+  color: white;
+}
+.content-section {
+  display: flex;
+  background: white;
+  color: black;
+  flex-direction: column;
+}
