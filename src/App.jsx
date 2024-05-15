@@ -13,23 +13,33 @@ function App() {
 return (
     <>
       <Header />
-      <div>
-        <h4>
+      <div className='main-section'>
+        <h4 className='space-between'>
           Position Absolute Acı Pizza
         </h4>
+        <div className='pizza-name'>
         <h3>
           85.50 TL
         </h3>
-        <p>
+        <h6>
+          4.9
+        </h6><h6>
+          200
+        </h6>
+        </div>
+        <p className='space-between'>
           Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin
           Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin
           Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin
           Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin
         </p>
-        <PizzaBoyutu name="content-section"/>
-        <Hamur name="content-section"/>
-        <EkMalzemeler name="content-section"/>
-        <SiparisNotu name="content-section"/>
+        <div className="pizza-type space-between">
+        <PizzaBoyutu/>
+        <Hamur/>
+        </div>
+        <EkMalzemeler className='space-between'/>
+        
+        
       </div>
     </>
   );

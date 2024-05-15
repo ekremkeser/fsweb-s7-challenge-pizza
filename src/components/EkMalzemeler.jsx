@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import SiparisNotu from './SiparisNotu';
 function EkMalzemeler() {
     // Ek malzemeleri state'ye atıyoruz
     const [seciliEkMalzemeler, setSeciliEkMalzemeler] = useState([])
@@ -10,23 +11,25 @@ function EkMalzemeler() {
       console.log(secililerAsNumber)
     }
     else {
-
+        
     }
   }
     const [fiyat, setFiyat] = useState(85.50)
     const fiyatAsNumber = Number(fiyat);
     const [pizzaSayisi, setPizzaSayisi] = useState([1])
     const pizzaSayisiAsNumber = Number(pizzaSayisi);
+    const toplamFiyat = secililerAsNumber + fiyat
     return (
         <div>
-        <form>
-        <h5>
+            <h5>
             Ek Malzemeler
         </h5>
         <p>
             En fazla 10 malzeme seçebilirsiniz.
             Her ek malzeme 5 TL'dir.
         </p>
+        <form className='preferences'>
+        <div className='alt-column'>
         <label>
         <input type="checkbox" name="Pepperoni" onChange={handleChange} value={5}/> Pepperoni
         </label>
@@ -42,6 +45,8 @@ function EkMalzemeler() {
         <label>
         <input type="checkbox" name="Soğan" onChange={handleChange} value={5}/> Soğan
         </label>
+        </div>
+        <div className='alt-column'>
         <label>
         <input type="checkbox" name="Domates" onChange={handleChange} value={5}/> Domates
         </label>
@@ -57,6 +62,8 @@ function EkMalzemeler() {
         <label>
         <input type="checkbox" name="Jalepeno" onChange={handleChange} value={5}/> Jalepeno
         </label>
+        </div>
+        <div className='alt-column'>
         <label>
         <input type="checkbox" name="Sarımsak" onChange={handleChange} value={5}/> Sarımsak
         </label>
@@ -69,10 +76,12 @@ function EkMalzemeler() {
         <label>
         <input type="checkbox" name="Kabak" onChange={handleChange} value={5}/> Kabak
         </label>
+        </div>
         </form>
+        <SiparisNotu className='space-between'/>
             <div>
-                <h5 >Sipariş Toplamı</h5>
-                <label >
+                
+                <label className='space-between'>
                 <button onClick={() => setPizzaSayisi(pizzaSayisiAsNumber - 1)}>
                         -
                     </button>
@@ -81,7 +90,8 @@ function EkMalzemeler() {
                     onChange={e => setPizzaSayisi(e.target.value)}
                     type="number"
                     />
-                    <button onClick={() => setPizzaSayisi(pizzaSayisiAsNumber + 1)}>
+                    <button onClick={() => setPizzaSayisi(pizzaSayisiAsNumber + 1)}
+                    >
                     +
                     </button>
                     
@@ -102,6 +112,15 @@ function EkMalzemeler() {
                     
                     </label >
                 */ }
+            </div>
+            <div>
+                <h5>Sipariş Toplamı</h5>
+                <label >
+                    Seçimler={secililerAsNumber}
+                </label>
+                <label >
+                    Toplam={secililerAsNumber + (pizzaSayisiAsNumber * 85.50)}
+                </label>
             </div>
         </div>
         

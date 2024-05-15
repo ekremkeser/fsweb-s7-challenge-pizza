@@ -6,10 +6,13 @@ function PizzaBoyutu() {
     }
     return (
         
-        <form>
+        <form className="pizza-size">
+
             <h5>
             Boyut Seç
             </h5>
+
+            <label htmlFor="Büyük" >
             <input 
             type="radio" 
             id="Büyük" 
@@ -17,9 +20,10 @@ function PizzaBoyutu() {
             checked={ 
                 selectedValue === "Büyük"} 
                 onChange={raidoHandleChange} />
-            <label htmlFor="Büyük" >
             Büyük 
             </label>
+
+            <label htmlFor="Orta" >
             <input 
             type="radio" 
             id="Orta"
@@ -27,9 +31,11 @@ function PizzaBoyutu() {
             checked={ 
                 selectedValue === "Orta"} 
                 onChange={raidoHandleChange}/>
-            <label htmlFor="Orta" >
             Orta 
             </label>
+
+            <label htmlFor="Küçük" >
+            
             <input 
             type="radio" 
             id="Küçük"
@@ -37,9 +43,9 @@ function PizzaBoyutu() {
             checked={ 
                 selectedValue === "Küçük"} 
                 onChange={raidoHandleChange}/>
-            <label htmlFor="Küçük" >
             Küçük 
             </label>
+            
         </form>
         
     )

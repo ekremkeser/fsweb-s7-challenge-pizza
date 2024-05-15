@@ -5,7 +5,7 @@ function Hamur() {
           Hamur Seç
           </h5>
           <select name="selectedFruit">
-            <option value="Hamur Seç">Hamur Seç</option>
+            <option value="Hamur Seç">Hamur Kalınlığı</option>
             <option value="Kalın">Kalın</option>
             <option value="İnce">İnce</option>
           </select>

@@ -7,7 +7,10 @@ function Header(props) {
   return (
     <header>
       <h1>Teknolojik Yemekler</h1>
-      Anasayfa - Sipariş Oluştur
+      <div className='red-backgorund'>
+        <h6 className='yazi-anasayfa'> Anasayfa - </h6>
+        <h6 className='yazi-siparisolustur'> Sipariş Oluştur </h6>
+        </div>
     </header>
   );
 }

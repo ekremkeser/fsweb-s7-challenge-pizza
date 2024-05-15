@@ -4,12 +4,53 @@ header {
   text-align: center;
   color: white;
 }
-.content-section {
+.red-backgorund {
+  background-color: #CE2829;
+  color: white;
   display: flex;
+  max-width: 700px;
+  margin: auto;
+  padding: 10px;
+}
+.main-section{
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: auto;
   background: white;
-  color: black;
+  padding: 10px;
+}
+
+.pizza-name{
+  display: flex;
+  justify-content: space-between;
+}
+
+.pizza-type {
+  display: flex;
+  justify-content: space-between;
+}
+
+.preferences {
+  display: flex;
+  gap: 10%;
+}
+
+.alt-column {
+  display: flex;
   flex-direction: column;
 }
+
+.pizza-size{
+  display: flex;
+  flex-direction: column;
+}
+
+.space-between {
+  padding-top: 30px;
+  padding-bottom: 40px;
+}
+
 button {
   color: white;
 }
