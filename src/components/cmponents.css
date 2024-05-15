@@ -10,3 +10,6 @@ header {
   color: black;
   flex-direction: column;
 }
+button {
+  color: white;
+}

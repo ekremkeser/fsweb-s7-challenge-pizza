@@ -6,6 +6,7 @@ import SiparisNotu from './components/SiparisNotu';
 import './components/cmponents.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import EkMalzemeler from './components/EkMalzemeler';
+import { useState } from 'react';
 
 function App() {
 
