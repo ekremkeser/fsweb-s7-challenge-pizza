@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-function PizzaBoyutu() {
+export default function PizzaBoyutu() {
     const [selectedValue, setSelectedValue] = useState("Orta")
-    const raidoHandleChange =(e) => {
+    const boyutHandleChange =(e) => {
         setSelectedValue(e.target.value)
     }
     return (
@@ -19,7 +19,7 @@ function PizzaBoyutu() {
             value="Büyük" 
             checked={ 
                 selectedValue === "Büyük"} 
-                onChange={raidoHandleChange} />
+                onChange={boyutHandleChange} />
             Büyük 
             </label>
 
@@ -30,7 +30,7 @@ function PizzaBoyutu() {
             value="Orta"
             checked={ 
                 selectedValue === "Orta"} 
-                onChange={raidoHandleChange}/>
+                onChange={boyutHandleChange}/>
             Orta 
             </label>
 
@@ -42,7 +42,7 @@ function PizzaBoyutu() {
             value="Küçük"
             checked={ 
                 selectedValue === "Küçük"} 
-                onChange={raidoHandleChange}/>
+                onChange={boyutHandleChange}/>
             Küçük 
             </label>
             
@@ -51,4 +51,3 @@ function PizzaBoyutu() {
     )
 
 }
-export default PizzaBoyutu;

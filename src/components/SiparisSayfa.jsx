@@ -1,13 +1,10 @@
-import { Switch, Route, useLocation } from 'react-router-dom';
+
 import Header from './Header';
 import PizzaBoyutu from "./PizzaBoyutu"
 import Hamur from './Hamur';
 import './cmponents.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import EkMalzemeler from './EkMalzemeler';
-import { useState } from 'react';
-import Anasayfa from './Anasayfa';
-import App from '../App';
 
 export default function SiparisSayfa() {
 

@@ -8,22 +8,29 @@ function EkMalzemeler() {
     // handle change ile seçili malzemelerin değerini topluyoruz
     const handleChange = (event) => {
     if (event.target.checked) {
-      setSeciliEkMalzemeler(secililerAsNumber + 5)
+      setSeciliEkMalzemeler(secililerAsNumber + Number(event.target.value))
       console.log(secililerAsNumber)
     }
     else {
-        setSeciliEkMalzemeler(secililerAsNumber - 5)  
+        setSeciliEkMalzemeler(secililerAsNumber - Number(event.target.value))  
     }
   } 
-  
+    
 
-    const [fiyat, setFiyat] = useState(85.50)
-    const fiyatAsNumber = Number(fiyat);
     const [pizzaSayisi, setPizzaSayisi] = useState([1])
     const pizzaSayisiAsNumber = Number(pizzaSayisi);
+
+    const totalPrice = (secililerAsNumber*pizzaSayisiAsNumber) + (pizzaSayisiAsNumber * 85.50)
+
+    const [sepet, setSepet] = useState([])
+    const sepetChange = (choose) => {
+        setSepet(choose.seciliEkMalzemeler + choose.pizzaSayisi)
+        console.log(sepet)
+    }
+
     return (
         <div>
-            <h5>
+        <h5>
             Ek Malzemeler
         </h5>
         <p>
@@ -121,7 +128,7 @@ function EkMalzemeler() {
                     Seçimler={secililerAsNumber}
                 </label>
                 <label >
-                    Toplam={(secililerAsNumber*pizzaSayisiAsNumber) + (pizzaSayisiAsNumber * 85.50)}
+                    Toplam={totalPrice}
                 </label>
                 <nav>
                     <Link to="/siparis-alindi">SİPARİŞ VER</Link>

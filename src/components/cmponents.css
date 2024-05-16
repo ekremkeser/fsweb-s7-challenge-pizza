@@ -78,7 +78,8 @@ button {
   background-color: yellow;
   padding: 10px 50px;
   font-size: 20px;
-  border-radius: 35%;
+  border-radius: 20px;
+  border: yellow;
 }
 
 .last-page {
