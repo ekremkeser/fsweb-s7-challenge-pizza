@@ -4,6 +4,11 @@ header {
   text-align: center;
   color: white;
 }
+
+.black.write {
+  color: black;
+  background-color: #CE2829;
+}
 .red-backgorund {
   background-color: #CE2829;
   color: white;
@@ -52,5 +57,39 @@ header {
 }
 
 button {
+  color: white;
+}
+
+.main-page-body {
+  background-image: url(
+    "C:\Users\Dell\Documents\GitHub\fsweb-s7-challenge-pizza\Assets\mile1-assets\home-banner.png"
+    );
+    background-size: "cover";
+    height: 100vh;
+    font-size: 50px;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+}
+
+.main-page-button {
+  text-decoration: none;
+  color: black;
+  background-color: yellow;
+  padding: 10px 50px;
+  font-size: 20px;
+  border-radius: 35%;
+}
+
+.last-page {
+  background-color: #CE2829;
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  align-content: center;
+}
+
+.writing-anasayfa {
+  text-decoration: none;
   color: white;
 }

@@ -1,48 +1,28 @@
-import { Switch, Route, useLocation } from 'react-router-dom';
-import Header from './components/Header';
-import PizzaBoyutu from "./components/PizzaBoyutu"
-import Hamur from './components/Hamur';
-import SiparisNotu from './components/SiparisNotu';
+import { Switch, Route, NavLink } from 'react-router-dom';
 import './components/cmponents.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import EkMalzemeler from './components/EkMalzemeler';
-import { useState } from 'react';
+import Anasayfa from './components/Anasayfa';
+import SiparisSayfa from './components/SiparisSayfa';
+import SonSayfa from './components/SonSayfa';
+import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
 
-function App() {
+export default function App() {
 
 return (
-    <>
-      <Header />
-      <div className='main-section'>
-        <h4 className='space-between'>
-          Position Absolute Acı Pizza
-        </h4>
-        <div className='pizza-name'>
-        <h3>
-          85.50 TL
-        </h3>
-        <h6>
-          4.9
-        </h6><h6>
-          200
-        </h6>
-        </div>
-        <p className='space-between'>
-          Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin
-          Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin
-          Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin
-          Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin Saçma Metin
-        </p>
-        <div className="pizza-type space-between">
-        <PizzaBoyutu/>
-        <Hamur/>
-        </div>
-        <EkMalzemeler className='space-between'/>
-        
-        
+<div>
+      <Switch>
+        <Route path="/" exact>
+          <Anasayfa />
+        </Route>
+        <Route path="/siparis-ver">
+          <SiparisSayfa />
+        </Route>
+        <Route path="/siparis-alindi">
+          <SonSayfa />
+        </Route>
+      </Switch>
+    
       </div>
-    </>
   );
 }
 
-export default App

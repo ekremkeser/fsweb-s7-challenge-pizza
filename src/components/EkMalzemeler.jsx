@@ -1,24 +1,26 @@
 import { useState } from 'react';
 import SiparisNotu from './SiparisNotu';
+import { NavLink, Link } from 'react-router-dom/cjs/react-router-dom.min';
 function EkMalzemeler() {
     // Ek malzemeleri state'ye atıyoruz
     const [seciliEkMalzemeler, setSeciliEkMalzemeler] = useState([])
     const secililerAsNumber = Number(seciliEkMalzemeler)
-    // handle change ile malzemelerin değerini topluyoruz
+    // handle change ile seçili malzemelerin değerini topluyoruz
     const handleChange = (event) => {
     if (event.target.checked) {
       setSeciliEkMalzemeler(secililerAsNumber + 5)
       console.log(secililerAsNumber)
     }
     else {
-        
+        setSeciliEkMalzemeler(secililerAsNumber - 5)  
     }
-  }
+  } 
+  
+
     const [fiyat, setFiyat] = useState(85.50)
     const fiyatAsNumber = Number(fiyat);
     const [pizzaSayisi, setPizzaSayisi] = useState([1])
     const pizzaSayisiAsNumber = Number(pizzaSayisi);
-    const toplamFiyat = secililerAsNumber + fiyat
     return (
         <div>
             <h5>
@@ -119,8 +121,11 @@ function EkMalzemeler() {
                     Seçimler={secililerAsNumber}
                 </label>
                 <label >
-                    Toplam={secililerAsNumber + (pizzaSayisiAsNumber * 85.50)}
+                    Toplam={(secililerAsNumber*pizzaSayisiAsNumber) + (pizzaSayisiAsNumber * 85.50)}
                 </label>
+                <nav>
+                    <Link to="/siparis-alindi">SİPARİŞ VER</Link>
+                </nav>
             </div>
         </div>
         
