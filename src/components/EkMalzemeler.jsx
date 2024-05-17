@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import SiparisNotu from './SiparisNotu';
 import { NavLink, Link } from 'react-router-dom/cjs/react-router-dom.min';
-function EkMalzemeler() {
+export default function EkMalzemeler() {
     // Ek malzemeleri state'ye atıyoruz
     const [seciliEkMalzemeler, setSeciliEkMalzemeler] = useState([])
     const secililerAsNumber = Number(seciliEkMalzemeler)
@@ -21,13 +21,7 @@ function EkMalzemeler() {
     const pizzaSayisiAsNumber = Number(pizzaSayisi);
 
     const totalPrice = (secililerAsNumber*pizzaSayisiAsNumber) + (pizzaSayisiAsNumber * 85.50)
-
-    const [sepet, setSepet] = useState([])
-    const sepetChange = (choose) => {
-        setSepet(choose.seciliEkMalzemeler + choose.pizzaSayisi)
-        console.log(sepet)
-    }
-
+    
     return (
         <div>
         <h5>
@@ -138,4 +132,3 @@ function EkMalzemeler() {
         
       );
 }
-export default EkMalzemeler;

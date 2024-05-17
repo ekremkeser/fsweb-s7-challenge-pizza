@@ -45,7 +45,6 @@ export default function PizzaBoyutu() {
                 onChange={boyutHandleChange}/>
             Küçük 
             </label>
-            
         </form>
         
     )

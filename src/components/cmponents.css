@@ -94,3 +94,8 @@ button {
   text-decoration: none;
   color: white;
 }
+
+.mainpage-footer {
+  display: flex;
+  justify-content: space-around;
+}

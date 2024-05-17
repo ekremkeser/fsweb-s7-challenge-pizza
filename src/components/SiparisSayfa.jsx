@@ -7,7 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import EkMalzemeler from './EkMalzemeler';
 
 export default function SiparisSayfa() {
-
+  
 return (
     <>
       <Header />
@@ -36,6 +36,7 @@ return (
         <Hamur/>
         </div>
         <EkMalzemeler className='space-between'/>
+        
       </div>
     </>
   );
