@@ -9,7 +9,8 @@ import { BrowserRouter } from 'react-router-dom/cjs/react-router-dom.min';
 export default function App() {
 
 return (
-<div>
+  <>
+    <div>
       <Switch>
         <Route path="/" exact>
           <Anasayfa />
@@ -21,8 +22,8 @@ return (
           <SonSayfa />
         </Route>
       </Switch>
-    
-      </div>
+    </div>
+  </>
   );
 }
 
