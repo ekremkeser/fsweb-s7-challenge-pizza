@@ -67,8 +67,7 @@ button {
 }
 
 .mainpage-back {
-  background-image: "C:\Users\Ekrem Keser\Documents\GitHub\fsweb-s7-challenge-pizza\Assets\mile1-assets\home-banner.png";
-  background-size: 500px 200px;
+  background-image: "../../Assets/mile1-assets/home-banner.png";
 }
 
 .main-page-button {
