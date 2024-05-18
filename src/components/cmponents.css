@@ -61,15 +61,14 @@ button {
 }
 
 .main-page-body {
-  background-image: url(
-    "C:\Users\Dell\Documents\GitHub\fsweb-s7-challenge-pizza\Assets\mile1-assets\home-banner.png"
-    );
-    background-size: "cover";
-    height: 100vh;
     font-size: 50px;
-    background-repeat: no-repeat;
     text-align: center;
-    color: white;
+    color: black
+}
+
+.mainpage-back {
+  background-image: "C:\Users\Ekrem Keser\Documents\GitHub\fsweb-s7-challenge-pizza\Assets\mile1-assets\home-banner.png";
+  background-size: 500px 200px;
 }
 
 .main-page-button {
